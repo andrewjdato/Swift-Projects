@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cye-Ig-NtE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="Fxn-Bn-zff">
+            <objects>
+                <tableViewController id="ugz-E7-vYo" customClass="TableViewController" customModule="House_Sort" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5n0-zu-zJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Fk5-v0-qm3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fk5-v0-qm3" id="chY-2b-iJr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ugz-E7-vYo" id="CT5-gu-I2E"/>
+                            <outlet property="delegate" destination="ugz-E7-vYo" id="9lr-SE-hct"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Fpn-gW-r5T"/>
+                    <connections>
+                        <outlet property="homeTableView" destination="5n0-zu-zJ2" id="t2w-tY-ucJ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WOk-34-jbY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="37"/>
+        </scene>
+        <!--Sort View Controller-->
+        <scene sceneID="cYm-ah-AfL">
+            <objects>
+                <viewController restorationIdentifier="SortViewController" storyboardIdentifier="SortViewController" id="3QB-SJ-FSe" customClass="SortViewController" customModule="House_Sort" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FFA-Jv-Tcl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RB-iC-41A">
+                                <rect key="frame" x="159" y="269" width="57" height="30"/>
+                                <state key="normal" title="Random"/>
+                                <connections>
+                                    <action selector="randomSort:" destination="3QB-SJ-FSe" eventType="touchUpInside" id="Obo-Ab-pwS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfw-ol-EAx">
+                                <rect key="frame" x="170" y="307" width="35" height="30"/>
+                                <state key="normal" title="Price"/>
+                                <connections>
+                                    <action selector="priceSort:" destination="3QB-SJ-FSe" eventType="touchUpInside" id="Do4-Dq-UyV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQh-Sz-dUw">
+                                <rect key="frame" x="172" y="345" width="30" height="30"/>
+                                <state key="normal" title="Size"/>
+                                <connections>
+                                    <action selector="sizeSort:" destination="3QB-SJ-FSe" eventType="touchUpInside" id="Hr7-Bg-ieS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5f8-Dj-gXg">
+                                <rect key="frame" x="147" y="383" width="81" height="30"/>
+                                <state key="normal" title="Date Added"/>
+                                <connections>
+                                    <action selector="dateAddedSort:" destination="3QB-SJ-FSe" eventType="touchUpInside" id="9bC-uR-ljY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select Sort Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxF-Va-EXn">
+                                <rect key="frame" x="69" y="77" width="236" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DCx-7h-cuf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FQh-Sz-dUw" firstAttribute="top" secondItem="gfw-ol-EAx" secondAttribute="bottom" constant="8" symbolic="YES" id="0I7-mq-8Ml"/>
+                            <constraint firstItem="qxF-Va-EXn" firstAttribute="centerX" secondItem="6RB-iC-41A" secondAttribute="centerX" id="DNu-Yp-dpW"/>
+                            <constraint firstItem="qxF-Va-EXn" firstAttribute="centerX" secondItem="FFA-Jv-Tcl" secondAttribute="centerX" id="H6p-bQ-rUC"/>
+                            <constraint firstItem="FQh-Sz-dUw" firstAttribute="centerX" secondItem="5f8-Dj-gXg" secondAttribute="centerX" id="LmL-Wj-7GO"/>
+                            <constraint firstItem="6RB-iC-41A" firstAttribute="centerX" secondItem="gfw-ol-EAx" secondAttribute="centerX" id="NsJ-cg-nOe"/>
+                            <constraint firstItem="qxF-Va-EXn" firstAttribute="leading" secondItem="KZv-3X-ZA9" secondAttribute="leading" constant="69" id="Tx4-sD-Clr"/>
+                            <constraint firstItem="gfw-ol-EAx" firstAttribute="top" secondItem="6RB-iC-41A" secondAttribute="bottom" constant="8" symbolic="YES" id="V0u-yj-BCQ"/>
+                            <constraint firstItem="gfw-ol-EAx" firstAttribute="centerX" secondItem="FQh-Sz-dUw" secondAttribute="centerX" id="gXU-BX-EVb"/>
+                            <constraint firstItem="qxF-Va-EXn" firstAttribute="top" secondItem="KZv-3X-ZA9" secondAttribute="top" constant="57" id="hnc-wx-Gzm"/>
+                            <constraint firstItem="5f8-Dj-gXg" firstAttribute="top" secondItem="FQh-Sz-dUw" secondAttribute="bottom" constant="8" symbolic="YES" id="viq-st-h4a"/>
+                            <constraint firstItem="KZv-3X-ZA9" firstAttribute="bottom" secondItem="5f8-Dj-gXg" secondAttribute="bottom" constant="254" id="wRd-5p-3B1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KZv-3X-ZA9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUg-QC-vDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="632.79999999999995" y="21.139430284857571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bfg-Ic-irZ">
+            <objects>
+                <navigationController id="Cye-Ig-NtE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ceo-zv-aIt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ugz-E7-vYo" kind="relationship" relationship="rootViewController" id="54E-KY-jey"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91E-fp-FBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071" y="-671"/>
+        </scene>
+    </scenes>
+</document>
